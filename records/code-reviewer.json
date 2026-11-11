@@ -3,10 +3,10 @@
  "suite": "code-review",
  "provider": "gemini",
  "requested_model": "gemini-3.5-flash",
- "measured_at": "2026-11-11T01:41:23+00:00",
+ "measured_at": "2026-11-11T15:28:59+00:00",
  "n_tasks_scored": 0,
  "complete": false,
- "note": "provider rate-limited mid-suite: custom.google-ai-studio: HTTP 429",
+ "note": "generalist arm failed on cart: custom.google-ai-studio: HTTP 503 {\"error\":{\"message\":\"gemini-3.5-flash is currently experiencing high demand, spikes in demand are usually temporary. Please try again later.\",\"code\":\"service_unavailable\"}}",
  "specialist_mean": 0.0,
  "generalist_mean": 0.0,
  "margin": 0.0,
@@ -23,7 +23,8 @@
  "tasks": [
   {
    "task": "cart",
-   "specialist_error": "provider rate-limited mid-suite: custom.google-ai-studio: HTTP 429"
+   "specialist_error": "specialist arm failed on cart: custom.google-ai-studio: HTTP 503 {\"error\":{\"message\":\"gemini-3.5-flash is currently experiencing high demand, spikes in demand are usually temporary. Please try again later.\",\"code\":\"service_unavailable\"}}\n^^^^\n  File \"/home/hatch/workspace/proofguild/src/proofguild/models.py\", line 79, in _post\n    raise ProviderError(f\"{connector}: HTTP {e.code} {body}\") from e\nproofguild.models.ProviderError: custom.google-ai-studio: HTTP 503 {\"error\":{\"message\":\"gemini-3.5-flash is currently experiencing high demand, spikes in demand are usually temporary. Please try again later.\",\"code\":\"service_unavailable\"}}\n",
+   "generalist_error": "generalist arm failed on cart: custom.google-ai-studio: HTTP 503 {\"error\":{\"message\":\"gemini-3.5-flash is currently experiencing high demand, spikes in demand are usually temporary. Please try again later.\",\"code\":\"service_unavailable\"}}\n^^^^\n  File \"/home/hatch/workspace/proofguild/src/proofguild/models.py\", line 79, in _post\n    raise ProviderError(f\"{connector}: HTTP {e.code} {body}\") from e\nproofguild.models.ProviderError: custom.google-ai-studio: HTTP 503 {\"error\":{\"message\":\"gemini-3.5-flash is currently experiencing high demand, spikes in demand are usually temporary. Please try again later.\",\"code\":\"service_unavailable\"}}\n"
   }
  ]
 }

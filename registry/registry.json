@@ -29,7 +29,7 @@
     "margin": 0.0,
     "provider": "gemini",
     "model": "gemini-3.5-flash",
-    "measured_at": "2026-11-11T01:41:23+00:00",
+    "measured_at": "2026-11-11T15:28:59+00:00",
     "record": "records/code-reviewer.json"
    }
   },
