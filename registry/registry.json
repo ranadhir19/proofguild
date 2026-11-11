@@ -1,0 +1,103 @@
+{
+ "specialists": [
+  {
+   "id": "code-reviewer",
+   "name": "Code Reviewer",
+   "specialty": "code-review",
+   "task_types": [
+    "code-review",
+    "pr-review"
+   ],
+   "description": "Reviews a small Python codebase for real defects, grounded in executed evidence: it runs the test suite and static checks first, then reviews against the module specs.",
+   "tools": [
+    "run_unittests",
+    "static_checks",
+    "read_files"
+   ],
+   "workflow": [
+    "run the repo's test suite and capture failures",
+    "run static checks (compile, unused imports, mutable defaults, bare excepts)",
+    "read every source file against its spec",
+    "report only findings it can tie to evidence"
+   ],
+   "competence": {
+    "status": "provisional",
+    "suite": "code-review",
+    "tasks": 0,
+    "specialist_score": 0.0,
+    "generalist_score": 0.0,
+    "margin": 0.0,
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "measured_at": "2026-11-11T01:41:23+00:00",
+    "record": "records/code-reviewer.json"
+   }
+  },
+  {
+   "id": "data-analyst",
+   "name": "Data Analyst",
+   "specialty": "data-analysis",
+   "task_types": [
+    "data-analysis",
+    "csv-analysis"
+   ],
+   "description": "Answers quantitative questions about a CSV by writing and actually executing analysis code against the file \u2014 never by estimating from a sample.",
+   "tools": [
+    "execute_python",
+    "read_csv"
+   ],
+   "workflow": [
+    "inspect the CSV header and shape",
+    "write a stdlib Python program that computes the answer from the full file",
+    "execute it; on error, repair once from the traceback",
+    "report the executed result"
+   ],
+   "competence": {
+    "status": "unmeasured"
+   }
+  },
+  {
+   "id": "researcher",
+   "name": "Researcher",
+   "specialty": "research",
+   "task_types": [
+    "research",
+    "fact-finding"
+   ],
+   "description": "Answers factual questions by fetching a real source first and citing resolvable URLs whose text supports the answer \u2014 not from memory.",
+   "tools": [
+    "fetch_url"
+   ],
+   "workflow": [
+    "choose the authoritative reference page for the topic and fetch it",
+    "answer only from the fetched text",
+    "cite the fetched URL"
+   ],
+   "competence": {
+    "status": "unmeasured"
+   }
+  },
+  {
+   "id": "action-extractor",
+   "name": "Action-Item Extractor",
+   "specialty": "meeting-extraction",
+   "task_types": [
+    "action-extraction",
+    "meeting-minutes"
+   ],
+   "description": "Extracts committed action items (owner, task, due date) from meeting transcripts, then re-reads the transcript to drop anything nobody actually committed to.",
+   "tools": [
+    "read_transcript",
+    "verify_pass"
+   ],
+   "workflow": [
+    "extract candidate items: explicit owner + commitment + due date",
+    "re-read the transcript and drop items with no explicit owner, items already completed, and vague suggestions",
+    "emit the surviving items as JSON"
+   ],
+   "competence": {
+    "status": "unmeasured"
+   }
+  }
+ ]
+}

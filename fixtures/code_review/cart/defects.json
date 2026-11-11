@@ -1,0 +1,14 @@
+{"repo": "cart", "clean_files": ["money.py"], "defects": [
+ {"id": "CRT-1", "file": "cart.py", "detectable_by": "reading",
+  "summary": "total() mutates the stored item prices when applying the discount, so repeated total() calls compound the discount",
+  "keywords": ["mutat", "stored", "side effect", "repeat", "compound"]},
+ {"id": "CRT-2", "file": "stock.py", "detectable_by": "tests",
+  "summary": "check_line never enforces the MAX_QTY cap, so oversized order lines pass",
+  "keywords": ["max_qty", "cap", "limit", "exceed", "99"]},
+ {"id": "CRT-3", "file": "dbhelper.py", "detectable_by": "reading",
+  "summary": "find_product builds SQL by string-formatting user input into the query (SQL injection); it should use a parameterised query",
+  "keywords": ["sql", "injection", "parameter", "format", "string"]},
+ {"id": "CRT-4", "file": "cart.py", "detectable_by": "static",
+  "summary": "cart.py imports json but never uses it",
+  "keywords": ["unused", "import", "json"]}
+]}

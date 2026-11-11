@@ -1,0 +1,29 @@
+{
+ "specialist_id": "code-reviewer",
+ "suite": "code-review",
+ "provider": "gemini",
+ "requested_model": "gemini-3.5-flash",
+ "measured_at": "2026-11-11T01:41:23+00:00",
+ "n_tasks_scored": 0,
+ "complete": false,
+ "note": "provider rate-limited mid-suite: custom.google-ai-studio: HTTP 429",
+ "specialist_mean": 0.0,
+ "generalist_mean": 0.0,
+ "margin": 0.0,
+ "specialist_wilson95": [
+  0.0,
+  0.0
+ ],
+ "generalist_wilson95": [
+  0.0,
+  0.0
+ ],
+ "status": "provisional",
+ "live_calls_made": 0,
+ "tasks": [
+  {
+   "task": "cart",
+   "specialist_error": "provider rate-limited mid-suite: custom.google-ai-studio: HTTP 429"
+  }
+ ]
+}

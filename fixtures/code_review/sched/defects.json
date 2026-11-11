@@ -1,0 +1,11 @@
+{"repo": "sched", "clean_files": ["formats.py"], "defects": [
+ {"id": "SCH-1", "file": "intervals.py", "detectable_by": "tests",
+  "summary": "overlaps uses strict <, so intervals that touch at an endpoint are reported as non-overlapping, contradicting the spec",
+  "keywords": ["touch", "strict", "endpoint", "boundary", "<="]},
+ {"id": "SCH-2", "file": "calendar_util.py", "detectable_by": "static",
+  "summary": "parse_day has a bare except that swallows every error and implicitly returns None, hiding bad input and real bugs alike",
+  "keywords": ["bare", "except", "swallow", "silent", "none"]},
+ {"id": "SCH-3", "file": "reminders.py", "detectable_by": "reading",
+  "summary": "due_before compares datetimes that may mix naive and timezone-aware values, which raises TypeError at runtime for mixed inputs",
+  "keywords": ["naive", "aware", "timezone", "typeerror", "compar"]}
+]}

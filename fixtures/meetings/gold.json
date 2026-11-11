@@ -1,0 +1,26 @@
+{"suite": "action-extraction",
+ "note": "Gold action items: explicit owner + commitment in the transcript. Ownerless suggestions and already-completed items are deliberately excluded and test precision.",
+ "transcripts": {
+  "standup_2026-11-09.txt": [
+    {"owner": "Jordan Ellis", "task_keywords": ["fix", "csv export", "quote"], "due": "2026-11-12"},
+    {"owner": "Maya Chen", "task_keywords": ["review", "empty-state", "mocks"], "due": "2026-11-11"},
+    {"owner": "Tom Okafor", "task_keywords": ["rewrite", "retry", "helper"], "due": "2026-11-13"},
+    {"owner": "Jordan Ellis", "task_keywords": ["draft", "release notes"], "due": "2026-11-13"}],
+  "vendor_call_2026-11-10.txt": [
+    {"owner": "Sam Whitfield", "task_keywords": ["send", "revised", "dpa"], "due": "2026-11-17"},
+    {"owner": "Sam Whitfield", "task_keywords": ["send", "itemised", "invoice", "october"], "due": "2026-11-13"},
+    {"owner": "Luis Gomez", "task_keywords": ["compile", "subprocessor", "assessment"], "due": "2026-11-16"},
+    {"owner": "Sam Whitfield", "task_keywords": ["email", "subprocessor", "list"], "due": "2026-11-12"},
+    {"owner": "Alex Rivera", "task_keywords": ["circulate", "call summary"], "due": "2026-11-11"}],
+  "planning_2026-11-11.txt": [
+    {"owner": "Chris Park", "task_keywords": ["churn", "cohort", "analysis"], "due": "2026-11-20"},
+    {"owner": "Fatima Al-Sayed", "task_keywords": ["tagging", "support tickets", "october"], "due": "2026-11-17"},
+    {"owner": "Ben Wright", "task_keywords": ["exponential backoff", "api client"], "due": "2026-11-18"},
+    {"owner": "Fatima Al-Sayed", "task_keywords": ["refresh", "billing", "faq"], "due": "2026-11-23"},
+    {"owner": "Rachel Donnelly", "task_keywords": ["book", "planning room"], "due": "2026-11-13"}],
+  "retro_2026-11-12.txt": [
+    {"owner": "Felix Wagner", "task_keywords": ["split", "staging", "demo", "databases"], "due": "2026-11-19"},
+    {"owner": "Omar Haddad", "task_keywords": ["remove", "stale", "feature flags"], "due": "2026-11-17"},
+    {"owner": "Grace Liu", "task_keywords": ["write up", "interview synthesis"], "due": "2026-11-20"},
+    {"owner": "Nina Petrova", "task_keywords": ["revise", "incident", "template"], "due": "2026-11-16"}]
+ }}

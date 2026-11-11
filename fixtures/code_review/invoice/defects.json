@@ -1,0 +1,11 @@
+{"repo": "invoice", "clean_files": ["tables.py"], "defects": [
+ {"id": "INV-1", "file": "billing.py", "detectable_by": "tests",
+  "summary": "Tax is computed on the pre-discount subtotal and added after discounting; spec says discount applies before tax",
+  "keywords": ["tax", "before", "order", "pre-discount", "subtotal"]},
+ {"id": "INV-2", "file": "billing.py", "detectable_by": "static",
+  "summary": "add_items uses a mutable default argument (basket=[]), so baskets leak between calls",
+  "keywords": ["mutable", "default", "basket", "shared"]},
+ {"id": "INV-3", "file": "discounts.py", "detectable_by": "tests",
+  "summary": "Discount rounding uses ROUND_HALF_EVEN (banker's) where the spec requires half-up",
+  "keywords": ["round", "half", "banker", "even"]}
+]}

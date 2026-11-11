@@ -1,0 +1,57 @@
+{
+ "specialist_id": "code-reviewer",
+ "suite": "code-review",
+ "provider": "groq",
+ "requested_model": "openai/gpt-oss-120b",
+ "measured_at": "2026-11-11T01:40:11+00:00",
+ "n_tasks_scored": 1,
+ "complete": false,
+ "note": "provider rate-limited mid-suite: custom.groq: HTTP 429",
+ "specialist_mean": 0.9375,
+ "generalist_mean": 0.75,
+ "margin": 0.1875,
+ "specialist_wilson95": [
+  0.1817,
+  0.999
+ ],
+ "generalist_wilson95": [
+  0.1179,
+  0.9854
+ ],
+ "status": "provisional",
+ "live_calls_made": 2,
+ "tasks": [
+  {
+   "task": "cart",
+   "specialist_score": 0.9375,
+   "specialist_details": {
+    "hits": [
+     "CRT-1",
+     "CRT-2",
+     "CRT-3",
+     "CRT-4"
+    ],
+    "n_findings": 5,
+    "extra_findings": 1,
+    "n_defects": 4
+   },
+   "specialist_output": "FINDING | cart.py | Cart.add does not enforce the maximum quantity limit (MAX_QTY) as required by the store policy | EVIDENCE: test_qty_cap fails because ok is True when adding a quantity exceeding MAX_QTY.  \nFINDING | cart.py | Cart.total mutates item prices, making the total non\u2011idempotent across repeated calls | EVIDENCE: test_total_repeatable fails (first total 90.0 != second total 81.0).  \nFINDING | cart.py | Unused import of the json module | EVIDENCE: static check reports \"unused import 'json'\".  \nFINDING | dbhelper.py | find_product builds an SQL query via string interpolation, exposing an SQL\u2011injection vulnerability | EVIDENCE: query = \"SELECT sku, price FROM products WHERE name = '%s'\" % name.  \nFINDING | stock.py | check_line does not enforce the MAX_QTY upper bound despite the module docstring stating the policy | EVIDENCE: function lacks any condition checking qty > MAX_QTY.",
+   "generalist_score": 0.75,
+   "generalist_details": {
+    "hits": [
+     "CRT-1",
+     "CRT-2",
+     "CRT-3"
+    ],
+    "n_findings": 3,
+    "extra_findings": 0,
+    "n_defects": 4
+   },
+   "generalist_output": "FINDING | cart.py | `total` mutates each item's stored price when applying a discount, causing cumulative discounts on subsequent calls | EVIDENCE: `item[\"price\"] = item[\"price\"] * (1 - discount_pct / 100.0)` modifies the original dict; e.g., `c.total(10)` followed by `c.total(10)` applies a 19% discount instead of 10% each time.  \n\nFINDING | dbhelper.py | Builds an SQL query by interpolating the product name directly, exposing the function to SQL injection attacks | EVIDENCE: `query = \"SELECT sku, price FROM products WHERE name = '%s'\" % name` concatenates unescaped user input into the statement.  \n\nFINDING | stock.py | `check_line` does not enforce the documented `MAX_QTY` limit for a single order line, contradicting the module's policy comment | EVIDENCE: The function only checks `qty <= 0` and never references `MAX_QTY`; a quantity of 150 would incorrectly return `(True, \"ok\")`."
+  },
+  {
+   "task": "invoice",
+   "specialist_error": "provider rate-limited mid-suite: custom.groq: HTTP 429"
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{"suite": "research-citations",
+ "note": "Facts chosen to be stable and to appear verbatim on a single well-known reference page. The specialist must fetch a source and cite it; the scorer checks the fact, that each cited URL resolves live, and that at least one cited page's text contains the gold value.",
+ "questions": [
+  {"id": "RQ1", "question": "In what year was the Python programming language first released?",
+   "gold_value": "1991", "topic": "Python (programming language)"},
+  {"id": "RQ2", "question": "In what year was construction of the Eiffel Tower completed?",
+   "gold_value": "1889", "topic": "Eiffel Tower"},
+  {"id": "RQ3", "question": "In what year did Apollo 11 land on the Moon?",
+   "gold_value": "1969", "topic": "Apollo 11"},
+  {"id": "RQ4", "question": "What is the atomic number of tungsten?",
+   "gold_value": "74", "topic": "Tungsten"}
+ ]}

@@ -1,0 +1,17 @@
+Sprint retrospective — Thursday 12 November 2026, 16:00. Present: Nina Petrova (scrum master), Omar Haddad (engineering), Grace Liu (product), Felix Wagner (SRE).
+
+Nina: What slowed us down this sprint? The staging outage on Tuesday cost half a day.
+
+Felix: Staging shared a database with the demo environment. I'll split the staging and demo databases by Thursday 19 November so an outage in one can't take the other down.
+
+Grace: The feature-flag cleanup kept slipping. Omar, you mentioned the flags last sprint too.
+
+Omar: Right — I'll remove the three stale feature flags (checkout_v2, new_onboarding, legacy_pricing) by Tuesday 17 November.
+
+Nina: I updated the team wiki with the new on-call rota yesterday, that's complete. Grace, the user interviews?
+
+Grace: We have five interview slots booked. I'll write up the interview synthesis by Friday 20 November and share it with the team.
+
+Felix: Also, someone really ought to automate the staging snapshot at some point. It bites us every few weeks. No volunteers today, apparently.
+
+Nina: Noted as an idea, no owner. Last: the incident template is out of date. I'll revise the incident response template by Monday 16 November.

@@ -1,0 +1,17 @@
+Planning meeting — Wednesday 11 November 2026, 11:00. Present: Rachel Donnelly (director), Chris Park (data), Fatima Al-Sayed (support), Ben Wright (engineering).
+
+Rachel: Q1 priorities. The churn report is the big one — Chris, I need the churn cohort analysis finished by Friday 20 November so we can plan retention spend.
+
+Chris: I'll deliver the churn cohort analysis by 20 November. I may need support ticket tags cleaned up first — the export is messy.
+
+Fatima: I can clean the ticket tags. I'll finish tagging the October support tickets by Tuesday 17 November so Chris has clean data.
+
+Rachel: Thanks. Ben, the API rate-limit errors are still hitting the mobile app.
+
+Ben: Root cause is our client retrying without backoff. I'll implement exponential backoff in the API client by Wednesday 18 November.
+
+Rachel: Good. I already sent the budget request to finance yesterday, so that's handled. Fatima, the help-centre FAQ is stale — could you refresh the billing FAQ articles by Monday 23 November?
+
+Fatima: Yes, I'll refresh the billing FAQ by 23 November.
+
+Rachel: And maybe we should think about a customer advisory board next year — no action now, just an idea. I'll also book the Q1 planning room by Friday 13 November so we have the space held.

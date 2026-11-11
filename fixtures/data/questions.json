@@ -1,0 +1,14 @@
+{"suite": "data-analysis", "csv": "orders.csv",
+ "note": "Net revenue for an order = units * unit_price * (1 - discount_pct/100). 'Average order value' = mean net revenue per order.",
+ "questions": [
+  {"id": "DQ1", "kind": "money", "tol_rel": 0.015,
+   "text": "What is the total net revenue for Q2 2026 (orders dated 2026-04-01 to 2026-06-30 inclusive)? Give the answer in dollars."},
+  {"id": "DQ2", "kind": "region_money", "tol_rel": 0.015,
+   "text": "Which region has the highest average order value (mean net revenue per order), and what is that average? Answer with the region name and the value in dollars."},
+  {"id": "DQ3", "kind": "product_units", "tol_rel": 0.0,
+   "text": "Which product sold the most total units across all orders, and how many units? Answer with the product name and the unit count."},
+  {"id": "DQ4", "kind": "percent", "tol_abs": 0.5,
+   "text": "What percentage of all orders have a discount_pct of 20 or more? Answer with the percentage."},
+  {"id": "DQ5", "kind": "money", "tol_rel": 0.015,
+   "text": "What is the total net revenue from Enterprise segment orders in March 2026? Give the answer in dollars."}
+ ]}

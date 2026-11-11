@@ -1,0 +1,17 @@
+Product standup — Monday 9 November 2026, 09:30. Present: Maya Chen (PM), Jordan Ellis (engineering), Priya Nair (design), Tom Okafor (QA).
+
+Maya: Quick round. The onboarding flow shipped last week and activation is up four points. Jordan, where are we on the export bug?
+
+Jordan: Reproduced it. The CSV export drops the last column when a field contains a quote. I'll have a fix ready by Thursday 12 November, and I'll add a regression test for quoted fields in the same change.
+
+Priya: I mocked the new empty states. I need feedback before I build them out — Maya, can you review the mocks by Wednesday 11 November?
+
+Maya: Yes, I'll review Priya's empty-state mocks by Wednesday 11 November. Also, someone should probably look at the analytics dashboard at some point; it's been slow lately. No owner for that yet, let's park it.
+
+Tom: The flaky checkout test failed twice over the weekend. I already fixed the fixture data issue on Friday, that's done. What's left is the retry logic — I'll rewrite the retry helper by Friday 13 November so the suite stops masking real failures.
+
+Maya: Great. Last thing: the release notes for 2.4. Jordan, you drafted them last time — could you draft the 2.4 notes by Friday 13 November as well?
+
+Jordan: Sure, I'll draft the release notes by Friday.
+
+Maya: Then we're done. Priya's design review moves to next week, no action needed today.

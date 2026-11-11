@@ -1,0 +1,15 @@
+Vendor call — Tuesday 10 November 2026, 14:00. Present: Alex Rivera (ops lead), Sam Whitfield (vendor account manager), Dana Kim (finance), Luis Gomez (security).
+
+Alex: Thanks for the updated quote. Before we sign the renewal, we need the data-processing addendum revised. Sam, can your legal team send the revised DPA by Tuesday 17 November?
+
+Sam: I'll get legal on it and send the revised DPA by 17 November. On pricing, we can hold the current rate if you commit by December.
+
+Dana: I ran the numbers last night — the renewal is within budget, no action needed from me on that. But I do need the itemised invoice for October. Sam, please send the itemised October invoice by Friday 13 November.
+
+Sam: Will do, invoice by Friday.
+
+Luis: Our security review found your status page doesn't show subprocessors. Alex, our side needs to document the subprocessor list in our vendor file — I'll compile our subprocessor assessment by Monday 16 November once Sam sends the current list.
+
+Sam: I'll email the current subprocessor list to Luis by Thursday 12 November.
+
+Alex: Perfect. Someone should also update the internal wiki page about this vendor sometime. Let's not forget, but no deadline. And I'll circulate the call summary to the team by Wednesday 11 November.

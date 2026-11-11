@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proofguild"
+version = "0.1.0"
+description = "A specialist agent library whose specialists ship measured competence records — verified head-to-head against a generalist baseline, or flagged unverified."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Ranadhir Ghosh"}]
+requires-python = ">=3.10"
+
+[project.scripts]
+proofguild = "proofguild.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

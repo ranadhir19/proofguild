@@ -1,0 +1,14 @@
+{"repo": "textkit", "clean_files": ["caseutil.py"], "defects": [
+ {"id": "TXT-1", "file": "paginate.py", "detectable_by": "tests",
+  "summary": "paginate drops the final partial page: n_pages uses floor division and remainder items are never emitted",
+  "keywords": ["remainder", "last page", "dropped", "floor", "partial"]},
+ {"id": "TXT-2", "file": "slugify.py", "detectable_by": "reading",
+  "summary": "slugify encodes to ASCII with 'ignore', silently dropping accented characters instead of transliterating them as the spec requires",
+  "keywords": ["accent", "unicode", "ascii", "drop", "transliterat"]},
+ {"id": "TXT-3", "file": "wordcount.py", "detectable_by": "tests",
+  "summary": "count_words splits on a single space, so the empty string counts as 1 word instead of 0",
+  "keywords": ["empty", "split", "space", "one word", "1"]},
+ {"id": "TXT-4", "file": "wordcount.py", "detectable_by": "static",
+  "summary": "wordcount.py imports os but never uses it",
+  "keywords": ["unused", "import", "os"]}
+]}
